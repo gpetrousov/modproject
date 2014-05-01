@@ -1,0 +1,237 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" >
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <title>Error 404</title>
+	
+	
+	<link href="/s/css/modern.css" rel="stylesheet"/>
+    <link href="/s/css/modern-responsive.css" rel="stylesheet"/>
+    <link href="/s/css/site.css" rel="stylesheet" type="text/css"/>
+	
+    
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/s/js/third_party/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="/s/js/third_party/modern/dropdown.js"></script>
+	<script type="text/javascript" src="/s/js/csrf_token.js"></script>
+	<script src="/s/js/datagovgr.js"></script>
+	 
+	
+	
+    
+	
+	
+    <script type="text/javascript">
+	JS_LANGUAGE_CODE='en';
+	
+        $(document).ready(function () {
+           
+		    $("#").addClass('current');
+			
+			//flag icons 
+            $('.flagicon').click(function() { changeLanguage($(this));  }).attr('src' , function () {    return "/s/imgs/icons/flags/"+ $(this).attr('alt')+ ".png" }); ;
+			
+			//search-bar focus/blur 
+			$('#id_value').focus(function() {
+            $(this).closest('div.search-bar').removeClass('border-color-datagovgr-fs5').addClass('border-color-datagovgr-fs6');
+			  }).
+			  blur(function() {
+
+					$(this).closest('div.search-bar').removeClass('border-color-datagovgr-fs6').addClass('border-color-datagovgr-fs5');
+
+			  });
+			  
+				  
+        }); //end  $(document).ready
+    </script>
+</head>
+
+
+<body class="metrouicss">
+   
+   <div class="page banner disclaimer bg-color-red">This is an experimental work in progress. Give us your feedback on <a href="https://twitter.com/datagovgr" target="_blank">Twitter</a> or <a href="http://www.data.gov.gr/contact" >Contact Us</a>
+	</div>
+	
+<div class="page base">
+
+<div style="display: none; position: fixed; height: 100px; width: 100px; padding: 10px; z-index: 10000;" class="bottom-right bg-color-darken fg-color-white">
+    Screen size:
+    <div id="sizeX">0</div>
+    <div id="sizeY">0</div>
+</div>
+
+<!-- custom header -->
+
+<div class="topbanner">
+  
+ <div class="topbanner-main">
+   
+  <!-- header -->
+   
+  <!-- utility menu -->
+   
+  <div class="topbanner-utilitybar">
+    
+   <div class="topbanner-signinprint">
+   
+      
+	   <div class="topbanner-utilitylinks">
+			<i class="icon-enter place-left fg-color-white"><a id="topbanner-login-trigger" href="/accounts/login"> Sign in</a></i>
+			<i class="icon-accessibility place-left fg-color-white"><a href="/accounts/register"> Register</a>  </i>
+		
+		</div>
+		
+      
+    
+	 
+   </div>
+   
+    	
+  </div>
+   
+  <div class="topbanner-logoprint">
+    <header class="topbanner-logo"><a href="/"><img src="/s/imgs/datagovgr_logo.png"  /></a></header> 
+  </div>
+
+  </div> <!-- topbanner-main -->
+  
+</div> <!-- topbanner -->
+
+<!-- custom header {END} -->
+
+<div class="nav-bar" style="background:#bbb;">
+    <div class="nav-bar-inner padding10">
+		
+		<span class="pull-menu"></span>
+
+       
+
+        <ul class="menu">
+           
+           
+					
+						<li><a href="/dataset-search">Data Catalog</a></li>
+					
+                
+					 
+					 <li><a href="/datasetrequests">Data Requests</a></li>
+					 <li><a href="/blog">Blog</a></li> 
+					 <li><a href="/about">About</a></li>
+                     <li><a href="/contact">Contact</a></li>
+					 
+						  
+            
+                     
+        </ul>
+		
+		<div class="place-right">
+			<!-- Language Select BEGIN -->
+			 <div class="language-select">  
+								
+					
+					<form action="/i18n/setlang/" method="post">
+						<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='q2oBqNM7pDHCMuB5AInebpZQrYeyIw7q' /></div>
+						<input name="next" type="hidden" value="" />
+						<input name="language" id="language" type="hidden" value="" />
+																	
+						<input type="image" class="flagicon" alt="en"  
+						 border="1px solid #fff!important"   />
+						<input type="image" class="flagicon" alt="el"  
+						  />
+								
+					</form>
+			</div>
+			<!-- Language Select END -->
+	
+		</div>
+
+    </div> <!-- nav-bar-inner -->
+	
+	</div> <!-- nav-bar -->
+
+	
+    <div class="search-bar border-color-datagovgr-fs5" style="border-width:1px;background-color: #BBB; height:34px"> <!-- search-bar -->
+		<form class="mainSearch" action="/dataset-search/" method="GET" style="width:75%; float:left;">
+			<div class="input-control text">
+				<input id="id_value" name="value" type="text" required="required" autocomplete="off" placeholder='Search Datasets' style="border:none; font-size:10pt">
+				<button class="btn-search"></button>
+			</div>
+		</form>
+		<div class="">
+			<i class="icon-database place-left fg-color-white" style="zoom:1; padding: 7px 5px 7px 20px;"></i>
+			<span class="fg-color-white" style="padding:5px 0; display:block">39 Datasets</span>      
+		</div>
+	</div> <!-- search-bar END -->
+	
+	
+	</div> <!-- page -->
+		
+
+
+	 <!-- Content Placeholder BEGIN -->
+	
+        
+			   
+
+<div class="page secondary">
+
+	<div class="page-header">
+		<div class="page-header-content">
+		<h1>Page not Found
+		<small>Error 404</small>
+		</h1>
+		<a href="javascript:GoBack();" class="back-button big page-back"></a>
+		</div>
+	</div>
+	
+	<div class="page-region">
+		<div class="page-region-content">
+		
+			<p> The resource could not be found.
+		</div> <!-- end page-region-content -->
+	</div> <!-- end page-region  -->
+	
+</div> <!-- end page secondary -->	
+
+
+		
+	 <!-- Content Placeholder END -->
+
+	 
+	
+
+</div>
+
+	<footer>
+	<div class="page">
+        <div class="nav-bar" >
+            <div class="nav-bar-inner padding10">
+				
+                <span id="footer-text" class="element fg-color-white">
+                     <a href="/about">About</a> | <a href="/faq">FAQ</a> | <a href="/terms">Terms Of Use</a> | <a href="http://government.gov.gr/"> Greek Government </a>
+                </span>
+				
+            </div>
+        </div>
+    </div>		
+	</footer>
+
+</body>
+</html>
+		
+
+
+
